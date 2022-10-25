@@ -1,0 +1,307 @@
+/*index.html*/
+.InicioMenu
+{
+    background: url(../assets/pantalla_playstation.webp);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 20em;
+}
+
+.ArribaInicio
+{
+    color: rgba(9, 203, 203, 0.95);
+    font-size: 90px;
+    text-align: center;
+    font-family: 'DRagonlord';
+}
+
+
+/*productos.html*/
+.ProductoMenu
+{
+    background: url(../assets/fondo_playstation.jpeg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 20em;
+}
+
+nav
+{
+    max-width: 900px;
+    margin: auto;
+    background-color: #333;
+    font-size: 20px;
+    margin-top: 0;
+}
+
+.menu-horizontal
+{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0;
+}
+
+@media screen and (min-width: 768px)
+{
+    .menu-horizontal
+    {
+        flex-direction: row;
+    }
+}
+
+.menu-horizontal > li > a
+{
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-horizontal > li:hover
+{
+    background-color: blue;
+}
+
+.menu-horizontal li:hover .menu-vertical
+{
+    display: block;
+    padding: 0px 0px 10px 0px;
+}
+
+.ArribaProductos
+{
+    color: rgb(251, 170, 30);
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.CentroProductos
+{
+    color: rgb(250, 246, 239);
+    font-size: 23px;
+}
+
+.SectionProductos
+{
+    color: rgba(21, 212, 129, 0.982);
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    animation-name: mover;
+    animation-duration: 3s;
+}
+
+@media screen and (max_width:1200px)
+{
+    .SectionProductos
+    {
+        width: 40%;
+    }
+}
+
+@media screen and (max_width:600px)
+{
+    .SectionProductos
+    {
+        width: 90%;
+    }
+}
+
+@keyframes mover
+{
+    100%
+    {
+        transform: translateX(0);
+    }
+    0%
+    {
+        transform: translateX(100%);
+    }
+}
+
+button
+{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+    background-color: rgb(35, 96, 219);
+    border-radius: 10px;
+    padding: 10px 15px;
+    color: #fff;
+}
+
+h2
+{
+    color: rgb(250, 246, 239);
+    font-size: 30px;
+}
+
+.FooterProductos
+{
+    color: rgba(21, 212, 129, 0.982);
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    animation-name: mover;
+    animation-duration: 3s;
+}
+
+@media screen and (max_width:1200px)
+{
+    .FooterProductos
+    {
+        width: 40%;
+    }
+}
+
+@media screen and (max_width:600px)
+{
+    .FooterProductos
+    {
+        width: 90%;
+    }
+}
+
+/*juegos.html*/
+.ArribaJuegos
+{
+    color: rgb(251, 170, 30);
+    font-size: 12px;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.SectionJuegos
+{
+    color: rgba(21, 212, 129, 0.982);
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    animation-name: mover;
+    animation-duration: 3s;
+}
+
+@media screen and (max_width:1200px)
+{
+    .SectionJuegos
+    {
+        width: 40%;
+    }
+}
+
+@media screen and (max_width:600px)
+{
+    .SectionJuegos
+    {
+        width: 90%;
+    }
+}
+
+.FooterJuegos
+{
+    color: rgba(21, 212, 129, 0.982);
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    animation-name: mover;
+    animation-duration: 3s;
+}
+
+@media screen and (max_width:1200px)
+{
+    .FooterJuegos
+    {
+        width: 40%;
+    }
+}
+
+@media screen and (max_width:600px)
+{
+    .FooterJuegos
+    {
+        width: 90%;
+    }
+}
+
+/*nosotros.html*/
+.NosotrosMenu
+{
+    background: url(../assets/imagen_play.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 20em;
+}
+
+.Cuadro
+{
+    color: rgb(250, 246, 239);
+    background-color:rgba(44, 86, 225, 0.68);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+    font-weight: bold;
+    font-family: cursive;
+    font-size: 21px;
+    border: 10px solid rgba(32, 190, 218, 0.776);
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.divtexto
+{
+    color: rgba(23, 215, 170, 0.893);
+    font-size: 50px;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+.divvideo
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
+}
+
+/*contactos.html*/
+.CentroContactos
+{
+    color: rgba(24, 211, 130, 0.945);
+    font-size: 27px;
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 200px 175px;
+}
+
+.AbajoContactos
+{
+    color: rgb(250, 246, 239);
+    background-color: #333;
+    height: 89%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.Iconos
+{
+    text-align: center;
+}
