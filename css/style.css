@@ -1,7 +1,7 @@
 /*index.html*/
 .InicioMenu
 {
-    background: url(../assets/pantalla_playstation.webp);
+    background: url(../assets/imagen.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -10,17 +10,133 @@
 
 .ArribaInicio
 {
-    color: rgba(9, 203, 203, 0.95);
+    color: rgba(203, 103, 9, 0.95);
     font-size: 90px;
     text-align: center;
     font-family: 'DRagonlord';
+    display: flex;
+    flex-direction: column;
 }
 
+.subtitulo
+{
+    color: #2f63cc;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.MedioInicio
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+img
+{
+    max-width: 100%;
+}
+
+.container-all
+{
+    position: relative;
+    max-width: 1000px;
+    width: 100%;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.slide
+{
+    display: flex;
+    transform: translate3d(0, 0, 0);
+    transition: all 600ms;
+    animation-name: autoplay;
+    animation-duration: 6.5s;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+
+.item-slide
+{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    flex-grow: 0;
+    max-width: 100%;
+}
+
+@keyframes autoplay
+{
+    33%
+    {
+        transform: translate3d(calc(-100% * 0), 0, 0);
+    }
+
+    66%
+    {
+        transform: translate3d(calc(-100% * 1), 0, 0);
+    }
+
+    100%
+    {
+        transform: translate3d(calc(-100% * 2), 0, 0);
+    }
+}
+
+.navlabel, .nav_input
+{
+    display: none;
+}
+
+@media (max-width: 858px)
+{
+    .navlabel
+    {
+        position: fixed;
+        display: block;
+        cursor: pointer;
+        left: 0;
+    }
+
+    .menu-horizontal
+    {
+        position: fixed;
+        top: 40px;
+        bottom: 0;
+        background-color: #333;
+        width: 100%;
+        height: 95%;
+        left: -5%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+        align-items: center;
+        clip-path: circle(0 at center);
+    }
+
+    .nav_input:checked + .menu-horizontal
+    {
+        clip-path: circle(100% at center);
+    }
+}
+
+.FooterIconos
+{
+    text-align: center;
+    margin-top: 100px;
+}
 
 /*productos.html*/
 .ProductoMenu
 {
-    background: url(../assets/fondo_playstation.jpeg);
+    background: url(../assets/fond_2.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -41,17 +157,7 @@ nav
     list-style: none;
     display: flex;
     justify-content: space-around;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 0;
-}
-
-@media screen and (min-width: 768px)
-{
-    .menu-horizontal
-    {
-        flex-direction: row;
-    }
+    margin-top: 0px;
 }
 
 .menu-horizontal > li > a
@@ -76,8 +182,11 @@ nav
 .ArribaProductos
 {
     color: rgb(251, 170, 30);
-    font-size: 12px;
-    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
 }
 
 .CentroProductos
@@ -86,31 +195,21 @@ nav
     font-size: 23px;
 }
 
-.SectionProductos
+.container
 {
-    color: rgba(21, 212, 129, 0.982);
-    font-size: 30px;
+    width: 100%;
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
     animation-name: mover;
     animation-duration: 3s;
 }
 
-@media screen and (max_width:1200px)
-{
-    .SectionProductos
-    {
-        width: 40%;
-    }
-}
 
-@media screen and (max_width:600px)
+@media screen and (max-width:576px)
 {
-    .SectionProductos
+    .container
     {
-        width: 90%;
+        flex-direction: column;
     }
 }
 
@@ -126,9 +225,53 @@ nav
     }
 }
 
-button
+.card
+{
+    width: 90%;
+    margin: 20px;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    cursor: default;
+    transition: all 400ms ease;
+}
+
+.card:hover
+{
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.4);
+    transform: translateY(-3%);
+}
+
+.card img
+{
+    width: 100%;
+    height: 210px;
+}
+
+.card .contenido
+{
+    padding: 15px;
+    text-align: center;
+}
+
+.card .contenido p
+{
+    line-height: 1.5;
+    color: #6a6a6a;
+    font-size: 20px;
+}
+
+.card .contenido h4
+{
+    font-weight: 400;
+    margin-bottom: 15px;
+    font-size: 25px;
+}
+
+.card .contenido button
 {
     display: block;
+    display: inline-block;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 700;
     background-color: rgb(35, 96, 219);
@@ -137,108 +280,36 @@ button
     color: #fff;
 }
 
-h2
+.card .contenido button:hover
 {
-    color: rgb(250, 246, 239);
-    font-size: 30px;
-}
-
-.FooterProductos
-{
-    color: rgba(21, 212, 129, 0.982);
-    font-size: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
-    animation-name: mover;
-    animation-duration: 3s;
-}
-
-@media screen and (max_width:1200px)
-{
-    .FooterProductos
-    {
-        width: 40%;
-    }
-}
-
-@media screen and (max_width:600px)
-{
-    .FooterProductos
-    {
-        width: 90%;
-    }
+    background: #2fb4cc;
+    color: #fff;
 }
 
 /*juegos.html*/
-.ArribaJuegos
+.JuegosMenu
 {
-    color: rgb(251, 170, 30);
-    font-size: 12px;
-    font-family: 'Press Start 2P', cursive;
+    background: url(../assets/fond.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 20em;
 }
 
-.SectionJuegos
+.subtitulo2
 {
-    color: rgba(21, 212, 129, 0.982);
+    color: #333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 30px;
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
-    animation-name: mover;
-    animation-duration: 3s;
-}
-
-@media screen and (max_width:1200px)
-{
-    .SectionJuegos
-    {
-        width: 40%;
-    }
-}
-
-@media screen and (max_width:600px)
-{
-    .SectionJuegos
-    {
-        width: 90%;
-    }
-}
-
-.FooterJuegos
-{
-    color: rgba(21, 212, 129, 0.982);
-    font-size: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-flow: wrap;
-    animation-name: mover;
-    animation-duration: 3s;
-}
-
-@media screen and (max_width:1200px)
-{
-    .FooterJuegos
-    {
-        width: 40%;
-    }
-}
-
-@media screen and (max_width:600px)
-{
-    .FooterJuegos
-    {
-        width: 90%;
-    }
+    flex-direction: column;
 }
 
 /*nosotros.html*/
 .NosotrosMenu
 {
-    background: url(../assets/imagen_play.jpg);
+    background: url(../assets/fond_3.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -263,7 +334,7 @@ h2
 
 .divtexto
 {
-    color: rgba(23, 215, 170, 0.893);
+    color: rgba(23, 52, 215, 0.893);
     font-size: 50px;
     font-family: 'Acme', sans-serif;
     text-align: center;
@@ -282,14 +353,31 @@ h2
 }
 
 /*contactos.html*/
+.ContactosMenu
+{
+    background: url(../assets/fond_1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 20em;
+}
+
 .CentroContactos
 {
-    color: rgba(24, 211, 130, 0.945);
+    color: #174dd7;
     font-size: 27px;
     font-family: 'Acme', sans-serif;
     text-align: center;
-    display: grid;
-    grid-template-rows: 200px 175px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mapa
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-flow: wrap;
 }
 
 .AbajoContactos
