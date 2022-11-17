@@ -303,25 +303,6 @@ nav {
   flex-direction: column;
 }
 
-.mapa {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-flow: wrap;
-}
-
-.AbajoContactos {
-  color: rgb(250, 246, 239);
-  background-color: #333;
-  height: 89%;
-  font-size: 40px;
-  font-weight: bold;
-}
-
-.Iconos {
-  text-align: center;
-}
-
 /*responsive menu de hamburguesa*/
 @media (max-width: 858px) {
   .navlabel {

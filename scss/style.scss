@@ -2,7 +2,6 @@ $color_1: rgba(203, 103, 9, 0.95);
 $color_2: #2f63cc;
 $color_3: white;
 $color_4: rgb(251, 170, 30);
-$color_5: rgb(250, 246, 239);
 $color_6: #6a6a6a;
 $color_7: #fff;
 $color_8: #333;
@@ -13,7 +12,6 @@ $font-family_2: Verdana, Geneva, Tahoma, sans-serif;
 $font-family_3: Arial, Helvetica, sans-serif;
 $font-family_4: cursive;
 $font-family_5: 'Acme', sans-serif;
-$background-color_1: #333;
 $background-color_2: blue;
 $background-color_3: rgb(35, 96, 219);
 $background-color_4: rgba(44, 86, 225, 0.68);
@@ -277,22 +275,6 @@ nav {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-}
-.mapa {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	flex-flow: wrap;
-}
-.AbajoContactos {
-	color: $color_5;
-	background-color: $background-color_1;
-	height: 89%;
-	font-size: 40px;
-	font-weight: bold;
-}
-.Iconos {
-	text-align: center;
 }
 
 /*responsive menu de hamburguesa*/
